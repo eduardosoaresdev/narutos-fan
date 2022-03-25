@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+//import variables
+@import 'variables/variables.scss';
+
+// import home
+@import 'pages/home.scss';
+
+// import login
+@import 'pages/login.scss';
+
+// import esqueceuSenha
+@import 'pages/esqueceuSenha.scss';
+
+// import cadastro
+@import 'pages/cadastro.scss';

@@ -1,0 +1,14 @@
+$color-primary: #f36a3e;
+$color-secondary: #220b01;
+$color-button: #0d7899ad;
+$color-button-second: rgba(0, 0, 0, 0.548);
+$color-shadow: rgba(0, 0, 0, 0.295);
+$color-border: rgba(243, 107, 62, 0.486);
+$background-color: rgba(255, 255, 255, 0.75);
+$font-title: "Anton", Arial, Helvetica, sans-serif;
+$font-title-second: Arial, Helvetica, sans-serif;
+
+@mixin button-size($width, $height) {
+    min-width: $width;
+    min-height: $height;
+}

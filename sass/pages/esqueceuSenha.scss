@@ -1,0 +1,176 @@
+.container-esqueceuSenha {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh 75vh 10vh;
+    background-color: $color-primary;
+}
+
+.logo-esqueceuSenha {
+    padding: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        h1 {
+            color: $color-secondary;
+            font-family: $font-title;
+            font-size: 50px;
+            text-align: center;
+            &:hover {
+                background-color: $color-secondary;
+                color: $color-primary;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.content-esqueceuSenha {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+
+    .content {
+        width: 40vw;
+        padding: 2%;
+        background-color: $background-color;
+        border-radius: 15px;
+        font-family: $font-title-second;
+        text-align: center;
+        box-shadow: 5px 5px $color-shadow;
+
+        input[class="input-esqueceuSenha"] {
+            height: 50px;
+            width: 80%;
+            font-size: 18px;
+            margin: 10px auto;
+            border-radius: 3px;
+            border: 1px solid $color-border;
+            padding-left: 5px;
+            display: flex;
+            outline: none;
+        }
+        input[type="submit"] {
+            @include button-size(50%, 40px);
+            border: none;
+            background-color: $color-button;
+            color: #fff;
+            margin: 5px;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 3px;
+            cursor: pointer;
+            padding: 0 5px;
+
+            &:hover {
+                background-color: $color-primary;
+                color: $background-color;
+                transition: 0.8ms;
+            }
+        }
+        button {
+            @include button-size(50%, 40px);
+            border: none;
+            background-color: $color-button-second;
+            color: #fff;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 3px;
+            cursor: pointer;
+            padding: 0 5px;
+
+            &:hover {
+                background-color: $color-primary;
+                color: $background-color;
+                transition: 0.8ms;
+            }
+        }
+        h2 {
+            color: $color-secondary;
+            margin: 10px 0;
+        }
+        hr {
+            color: $color-border;
+        }
+        div > p {
+            margin: 20px 0;
+        }
+    }
+}
+
+.footer-esqueceuSenha {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    a {
+        text-decoration: none;
+        button {
+            border: none;
+            border-radius: 3px;
+            padding: 5px;
+            background-color: $color-primary;
+            font-weight: bold;
+            font-family: $font-title-second;
+            font-size: 12px;
+            color: $color-secondary;
+            box-shadow: 2px -2px $color-shadow;
+            cursor: pointer;
+        }
+    }
+}
+
+// responsividade das views
+
+@media (max-width: 720px) {
+    .content-esqueceuSenha {
+        .content {
+            width: 75vw;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .logo-esqueceuSenha {
+        a {
+            h1 {
+                font-size: 40px;
+            }
+        }
+    }
+    .content-esqueceuSenha {
+        .content {
+            input[class="input-esqueceuSenha"] {
+                font-size: 12px;
+                height: 40px;
+            }
+            input[type="submit"],
+            button {
+                @include button-size(50%, 30px);
+                font-size: 12px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            div > p {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 250px) {
+    .logo-esqueceuSenha {
+        a {
+            h1 {
+                font-size: 30px;
+            }
+        }
+    }
+}
